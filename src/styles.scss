@@ -1,0 +1,28 @@
+@import "~bootstrap/scss/bootstrap";
+
+$primay-color: #18392b;
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 2.5em;
+    background: $primay-color;
+
+    a{
+        color: white;
+        font-size: 1.5rem;
+    }
+    #homeLogo{
+        margin-left: 40px;
+    }
+    #search{
+        margin-right: 25px;
+    }
+}
+
+.indexImages{
+    width: 750px;
+    height: 550px;
+}
+
