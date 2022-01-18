@@ -23,8 +23,6 @@ function Main(){
 
     return (
         <main>
-            <Nav />
-            <SideMenu />
             <Switch>
             <Route exact path='/home' component={Home} />
             <Route exact path='/exercises'>

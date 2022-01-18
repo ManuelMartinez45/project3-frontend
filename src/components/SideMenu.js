@@ -5,8 +5,8 @@ function SideMenu(){
     return (
         <section id='sideMenu'>
             <ul>
-                {muscleGroups.map((mg) => (
-                    <Link to={`/exercises/${mg}`}>
+                {muscleGroups.map((mg, key) => (
+                    <Link to={`/exercises/${mg}`} key={key}>
                         <li className='sideMenuLink'>{mg} </li>
                     </Link>
                 ))}
