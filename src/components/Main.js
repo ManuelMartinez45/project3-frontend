@@ -2,24 +2,31 @@ import { Route, Switch} from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import Index from '../pages/Index'
 import Home from '../pages/Home'
-import Nav from './Nav'
-import SideMenu from './SideMenu'
 import MuscleGroup from '../pages/MuscleGroup'
 import Exercise from '../pages/Exercise'
-
+import Workout from '../pages/Workout'
 function Main(){
     const [exercise, setExercise] = useState([])
+    const [workout, setWorkout] = useState([])
 
     // const URL = 'https://wayte-backend.herokuapp.com/exercises'
-    const URL = 'http://localhost:3001/exercises'
+    const exerciseURL = 'http://localhost:3001/'
+    const workoutURL = 'http://localhost:3001/workouts'
     
     async function getExercise(){
-        const response = await fetch(URL);
+        const response = await fetch(exerciseURL);
         const data = await response.json()
         setExercise(data)
     }
 
+    async function getWorkout(){
+        const response = await fetch(workoutURL);
+        const data = await response.json()
+        setWorkout(data)
+    }
+
     useEffect(() => getExercise(), [])
+    useEffect(() => getWorkout(), [])
 
     return (
         <main>
@@ -45,6 +52,15 @@ function Main(){
                     <Exercise 
                         {...props}
                         exercise={exercise}
+                        />
+                )}
+            />
+            <Route 
+                path='/workouts'
+                render={ (props) => (
+                    <Workout 
+                        {...props}
+                        workout={workout}
                         />
                 )}
             />

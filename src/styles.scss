@@ -1,6 +1,10 @@
 @import "~bootstrap/scss/bootstrap";
+@import "./styles/MuscleGroup.scss";
+@import "./styles/Exercise.scss";
+@import './styles/Index.scss';
 
-$primay-color: #18392b;
+$primary-color: rgb(220,220,220);
+
 
 //NavBar
 .nav{
@@ -8,8 +12,10 @@ $primay-color: #18392b;
     justify-content: space-between;
     align-items: center;
     height: 3em;
-    background: $primay-color;
-
+    background: $primary-color;
+    width: 100%; 
+    border: .5px solid #778899;
+    z-index: 2;
     a{
         color: white;
         font-size: 1.5rem;
@@ -24,33 +30,31 @@ $primay-color: #18392b;
 
 //SideMenu
 #sideMenu{
-    position: absolute;
+    position: fixed;
     left: 0;
-    width: 20%;
-    height: 60%;
-    background: $primay-color;
-    border: 1px solid black;
+    height: 100%;
+    background: linear-gradient(to top, #696969, $primary-color);
     margin: 0;
-    padding: 0;
+    padding-top: 6em;
     
-    li{
-        list-style: none;
-        font-size: 20px;
-        text-transform: capitalize;
-        margin: 10px;
-        border-bottom: 1px solid black;
-        color: white;
+    ul{
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        li{ 
+            width: 100%;
+            list-style: none;
+            font-size: 20px;
+            text-transform: capitalize;
+            margin: 10px 0;
+            border-bottom: 1px solid black;
+            color: white;
+        }
     }
+    
 }
 
 
-#muscleHeading{
-    text-transform: capitalize;
-    text-decoration: underline;
-}
 
-.indexImages{
-    width: 750px;
-    height: 550px;
-}
 

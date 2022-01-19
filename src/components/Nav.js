@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { BiDumbbell, BiSearch } from 'react-icons/bi'
 import { FaUserCircle, FaUsers} from 'react-icons/fa'
+import { IoIosJournal } from 'react-icons/io'
 import { login, logout } from '../services/firebase'
 
 function Nav(props){
@@ -11,7 +12,12 @@ function Nav(props){
                 <span >WAYTE</span>
             </Link>
             <Link to='/exercises'>
-                <BiDumbbell />
+                {/* <BiDumbbell /> */}
+                Exercises
+            </Link>
+            <Link to='/workouts'>
+                {/* <IoIosJournal /> */}
+                Workouts
             </Link>
             {
                 props.user ? 

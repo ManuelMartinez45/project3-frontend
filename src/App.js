@@ -5,6 +5,7 @@ import Nav from './components/Nav'
 import SideMenu from './components/SideMenu'
 import Main from './components/Main'
 import { useState, useEffect } from 'react';
+import { Container, Row, Col } from 'react-bootstrap/'
 
 function App() {
   const [ user, setUser ] = useState(null)
@@ -14,11 +15,19 @@ function App() {
   }, [])
 
   return (
-    <div className="App">
-      <Nav user = {user} />
-      <SideMenu />
-      <Main user = {user} />
-    </div>
+    <Container fluid className="App">
+      <Row>
+        <Col md={2} id='sideMenu'>
+          <SideMenu />
+        </Col>
+        <Nav user = {user} />
+      </Row>
+      <Row >
+        <Col md={{ span: 10, offset: 2}}>
+          <Main user = {user} />
+        </Col>
+      </Row>
+    </Container>
   );
 }
 
