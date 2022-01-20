@@ -4,7 +4,9 @@ import Index from '../pages/Index'
 import Home from '../pages/Home'
 import MuscleGroup from '../pages/MuscleGroup'
 import Exercise from '../pages/Exercise'
-import Workout from '../pages/Workout'
+import Workouts from '../pages/Workouts'
+import Form from './Form'
+
 function Main(){
     const [exercise, setExercise] = useState([])
     const [workout, setWorkout] = useState([])
@@ -25,6 +27,19 @@ function Main(){
         setWorkout(data)
     }
 
+    async function createWorkout(workout){
+        const response = await fetch(workoutURL, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'Application/json'
+            },
+            body: JSON.stringify(workout)
+        })
+        getWorkout()
+        const workouts = await response.json()
+        setWorkout(workouts)
+    } 
+
     useEffect(() => getExercise(), [])
     useEffect(() => getWorkout(), [])
 
@@ -32,12 +47,10 @@ function Main(){
         <main>
             <Switch>
             <Route exact path='/home' component={Home} />
-            <Route exact path='/exercises'>
+            <Route exact strict path='/exercises'>
                 <Index exercise={exercise}/>
             </Route>
             <Route 
-                exact
-                strict
                 path='/exercises/:muscleGroup'
                 render={(props) => (
                     <MuscleGroup
@@ -56,13 +69,26 @@ function Main(){
                 )}
             />
             <Route 
+                exact
+                strict
                 path='/workouts'
                 render={ (props) => (
-                    <Workout 
+                    <Workouts 
                         {...props}
                         workout={workout}
                         />
                 )}
+            />
+            <Route 
+                path='/workouts/new'
+                render={ (props) => (
+                    <Form 
+                        {...props}
+                        workout={workout}
+                        createWorkout={createWorkout}
+                    />
+                )}
+                
             />
             </Switch>
         </main>
