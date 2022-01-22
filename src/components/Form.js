@@ -5,20 +5,23 @@ function Form(props){
     const [form, setForm] = useState({
         title: '',
         split: '',
-        exercises: []
-            // {
-            //     name: '',
-            //     sets: '',
-            //     reps: ''
-            // }
+        // exercises: []
+        days: []
         
     })
 
+    
     const [exercises, setExercises] = useState([
         {
             name: '',
             set: '',
             reps: ''
+        },
+    ])
+    
+    const [days, setDays] = useState([
+        {
+            exercises: []
         },
     ])
 
@@ -32,13 +35,18 @@ function Form(props){
     function handleExerciseChange(index,evt){
         const values = [...exercises]
         values[index][evt.target.name] = evt.target.value
-        // setExercises(values)
-        
+        // setDays((days) => ({
+        //     ...days,
+        //     exercises: values
+        // }))        
         setForm((form) => ({
             ...form,
-            exercises: values
+            days: [{
+                exercises: values
+            }]
         })
         )
+        console.log(form)
     }
 
     function handleAddExercise(evt){
@@ -56,12 +64,23 @@ function Form(props){
         setExercises(values)
     }
 
+    function handleAddDay(evt){
+        evt.preventDefault()
+        days.length = days.length + 1
+        setDays([...days, {
+            exercises: []
+        }])
+    }
+
     function handleSubmit(evt){
         evt.preventDefault()
         setForm(() => ({
             ...form,
-            exercises:{
-                ...exercises
+            days: {
+                ...days,
+                exercises: {
+                    ...exercises
+                }
             }
         }))
         props.createWorkout(form);
@@ -86,7 +105,6 @@ function Form(props){
                     placeholder='Weekly Split'
                     onChange={handleChange}
                 />
-
 
                 { exercises.map((exercise, index) => (
                     <div key={ index }>
@@ -117,9 +135,11 @@ function Form(props){
                         <button onClick={() => handleRemoveExercise(index)}>Remove</button>
                     </div>
                 ))}
-                <input type="submit" value='Add New Workout' />
+                <button onClick={handleAddExercise}>Add Exercise</button>
+                <button onClick={handleAddDay}>Add Day</button>
+                <br />
+                    <input type="submit" value='Add New Workout' />
             </form>
-                <button onClick={handleAddExercise}>Add</button>
             <Link to='/workouts'>
                 <button>Back</button>
             </Link>
