@@ -46,11 +46,19 @@ function Main(){
     return (
         <main>
             <Switch>
-            <Route exact path='/home' component={Home} />
+            <Route exact path='/home' render={(props) => (
+                <Home 
+                    {...props}
+                    exercise={exercise}
+                    workout={workout}
+                />
+            )} />
             <Route exact strict path='/exercises'>
                 <Index exercise={exercise}/>
             </Route>
             <Route 
+                exact
+                strict
                 path='/exercises/:muscleGroup'
                 render={(props) => (
                     <MuscleGroup

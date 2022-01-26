@@ -1,15 +1,20 @@
 import { Container, Row, Col } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 function Index(props){
+
+    
     return(
         <Container id="indexPage">
-            <h1>Exercises Guide List</h1>
+            <h1>
+                Exercise Guide List
+            </h1>
+            <hr></hr>
             <Row>
                 {props.exercise.map((exercise, key) => {
-                    return <Col  className='whatthe'lg={4}>
-                        <div className="float-left exercise" key={key}>
+                    return <Col  className='whatthe'lg={{span: 8, offset: 2}}>
+                        <div className="exercise" key={key}>
                         <Link to={`/exercises/${exercise.main}/${exercise.name}`}>
-                            <img  src={exercise.img} alt={exercise.name} />
+                            {/* <img  src={exercise.img} alt={exercise.name} /> */}
                             <h3>{exercise.name}</h3>
                         </Link>
                         </div>

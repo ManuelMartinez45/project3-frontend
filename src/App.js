@@ -15,15 +15,15 @@ function App() {
   }, [])
 
   return (
-    <Container fluid className="App">
+    <Container fluid id="App">
       <Row>
-        <Col md={2} id='sideMenu'>
+        {/* <Col md={2} id='sideMenu'>
           <SideMenu />
-        </Col>
+        </Col> */}
         <Nav user = {user} />
       </Row>
       <Row >
-        <Col md={{ span: 10, offset: 2}}>
+        <Col lg={12} md={10} sm={12}>
           <Main user = {user} />
         </Col>
       </Row>
