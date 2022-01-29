@@ -36,9 +36,9 @@
     }
 
     #form{
-        margin-top: 15px;
+        margin-top: 30px;
         width: 50%;
-        height: 80%;
+        height: 60%;
         border-radius: 40px;
         text-align: center;
         background: $secondary-color;
@@ -51,11 +51,13 @@
         input{
             margin-top: 15px;
             height: 2em;
-            border-radius: 20px;
+            border-radius: 10px;
+
         }
 
         label{
             color: $dark-theme;
+            text-align: center;
         }
 
         
@@ -63,6 +65,10 @@
         #exerciseInput{
             input{
                 margin-top: 15px;
+            }
+
+            label{
+                text-align: center;
             }
         }
 

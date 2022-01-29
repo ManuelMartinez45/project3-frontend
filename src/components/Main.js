@@ -5,6 +5,7 @@ import Home from '../pages/Home'
 import MuscleGroup from '../pages/MuscleGroup'
 import Exercise from '../pages/Exercise'
 import Workouts from '../pages/Workouts'
+import WorkoutDisplay from '../pages/WorkoutDisplay'
 import Form from './Form'
 
 function Main(){
@@ -92,6 +93,7 @@ function Main(){
                         />
                 )}
             />
+
             <Route 
                 path='/workouts/new'
                 render={ (props) => (
@@ -99,10 +101,23 @@ function Main(){
                         {...props}
                         workout={workout}
                         createWorkout={createWorkout}
+                        getWorkout={getWorkout}
+
                     />
                 )}
-                
             />
+            
+            <Route
+                    path={'/workouts/:workout'}
+                    render={(props) => (
+                        <WorkoutDisplay
+                            {...props}
+                            workout={workout}
+                            exercise={exercise}
+                        />
+                    )}
+            />
+   
             </Switch>
         </main>
     )

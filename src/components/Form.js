@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
 import { Col, Container, Row } from 'react-bootstrap'
 
 function Form(props){
@@ -10,6 +10,7 @@ function Form(props){
         
     })
 
+    let history = useHistory()
     
     const [exercises, setExercises] = useState([
         {

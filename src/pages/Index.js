@@ -11,7 +11,7 @@ function Index(props){
             <hr></hr>
             <Row>
                 {props.exercise.map((exercise, key) => {
-                    return <Col key={key} className='whatthe'lg={{span: 8, offset: 2}}>
+                    return <Col key={key} id='exerciseNames'lg={{span: 8, offset: 2}}>
                         <div className="exercise" >
                         <Link to={`/exercises/${exercise.main}/${exercise.name}`}>
                             {/* <img  src={exercise.img} alt={exercise.name} /> */}

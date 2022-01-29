@@ -4,12 +4,11 @@
     width: 100vw;
     height: 100vh;
     display: flex;
-    justify-content: center;
     flex-direction: column;
     background-color: $dark-theme;
 
     h1{
-        margin: 10px;
+        margin: 120px;
         color: $secondary-color;
         text-shadow: 1px 1px $primary-color;
         text-decoration: underline;
@@ -24,8 +23,8 @@
         border: .5px solid $primary-color;
         border-radius: 20px;
         font-weight: bold;
-        position: relative;
-        right: -35%;
+        margin-top: 25px;
+        margin-left: 120px;
         
         &:hover{
             background: $dark-theme;
@@ -36,7 +35,7 @@
     #workoutNames{
         display: flex;
         justify-content: center;
-        margin-top: 20px;
+        // margin-top: 20px;
         .workouts{
             width: 75%;
             margin-top: 10px;

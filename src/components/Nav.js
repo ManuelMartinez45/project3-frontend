@@ -1,12 +1,13 @@
 import { Link } from 'react-router-dom'
 import { BiDumbbell, BiSearch } from 'react-icons/bi'
-import { FaUserCircle, FaUsers} from 'react-icons/fa'
+import { FaUserCircle, FaUserSlash} from 'react-icons/fa'
 import { IoIosJournal } from 'react-icons/io'
 import { InputGroup, Button, FormControl} from 'react-bootstrap'
 import { login, logout } from '../services/firebase'
 
 function Nav(props){
-    if(props.user) console.log(props.user)
+    let userName
+    if(props.user) {userName = props.user.displayName.split(' ')[0] }
     return (
         <nav className="nav">
             <Link id='homeLogo' className='menuLinks' to='/'>
@@ -16,20 +17,12 @@ function Nav(props){
                 {/* <BiDumbbell /> */}
                 Exercises
             </Link>
-            <Link className='menuLinks' to='/workouts'>
-                {/* <IoIosJournal /> */}
-                Workouts
+            <Link className='menuLinks' to='#'>
+                Nutrition
             </Link>
-            {
-                props.user ? 
-                <>
-                    <span>{props.user.displayName}</span>
-                    <button onClick={logout}>< FaUsers /></button>
-                   
-                </>
-                : 
-                <button onClick={login}>< FaUserCircle /></button>
-            }
+            <Link className='menuLinks' to='#'>
+                Articles
+            </Link>
               
                 <InputGroup id='search'>
                     <FormControl
@@ -39,6 +32,20 @@ function Nav(props){
                     aria-describedby="search bar"
                     />
                 </InputGroup>
+                {
+                    props.user ? 
+                    <>
+                        <Link className='menuLinks' id='workouts' to='/workouts'>
+                            {/* <IoIosJournal /> */}
+                            Workouts
+                        </Link>
+                        <button id='Logout' onClick={logout}>< FaUserSlash /><br />{userName}</button>
+                        <span id='userName'> </span>
+                       
+                    </>
+                    : 
+                    <button id='Login' className='menuLinks' onClick={login}>< FaUserCircle /></button>
+                }
         </nav>
     )
 }
