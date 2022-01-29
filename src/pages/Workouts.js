@@ -1,18 +1,27 @@
-// import { Container, Row } from 'react-bootstrap'
+import { Container,Col, Row } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 
 function Workout(props){
-    console.log(props.workout)
     return (
-        <>
+        <Container id='workoutPage'>
             <Link to='/workouts/new'>
-                <button>New</button>
             </Link>
-            <h1>Workouts</h1>
-            {props.workout.map((workout,key) => (
-                <h3 key={key}>{workout.title}</h3>
-            ))}
-        </>
+            <Row>
+                <h1>Workouts</h1>
+            </Row>
+            <Row>
+                <Col lg={{span: 8, offset: 2}} id='workoutNames'>
+                    <div className="workouts">
+                        {props.workout.map((workout,key) => (
+                            <Link key={key} to={`/workouts/${workout.title}`}>
+                                <h3>{workout.title}</h3>
+                            </Link>
+                        ))}
+                    </div>
+                </Col>
+            </Row>
+                    <button>New</button>
+        </Container>
     )
 }
 

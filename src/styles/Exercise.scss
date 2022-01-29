@@ -1,8 +1,63 @@
+@import './variables.scss';
+
 #exercisePage{
+    color: $dark-theme;
+
     h1{
         margin: 30px; 
+        width: 100%;
+        text-align: center;
+        font-size: 2.5em;
+        text-decoration: underline;
     }
-    img{
-        width: 60%
+    #image{
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    #info{
+        margin-top: 20%;
+        p{
+
+            h4, h5{
+                display: inline;
+                margin: 3px;
+
+            }
+            h4 {
+                text-decoration: underline;
+            }
+            h5{
+                color: whitesmoke;
+                text-shadow: 1px 1px $secondary-color;
+                font-size: 1.3em;
+            }
+        }
+    }
+
+    span{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        h4{
+            margin-top: 5%;
+            font-size: 1.7em;
+            text-decoration: underline;
+        }
+        ol{
+            width: 75%;
+            li{
+                font-size: 1.2em;
+                color: white;
+            }
+        }
+    }
+
+    div{
+        margin-top: 30px;
+        display: flex;
+        justify-content: center;
     }
 }

@@ -32,7 +32,7 @@ function Home(){
                 <Fade onVisibilityChange={true} duration={2000}>
                     <Row>
                         <section>
-                            <Col lg={4}>
+                            <Col lg={{span: 4, offset: 2}}>
                                 <div className="guides">
                                     <h3>Guides</h3>
                                     <hr></hr>
@@ -41,11 +41,6 @@ function Home(){
                                         <p className='homeGuideLinks'>{mg}</p>
                                     </Link>
                                 ))}
-                                </div>
-                            </Col>
-                            <Col lg={4}>
-                                <div className="workouts">
-                                    <h3>Workouts</h3>
                                 </div>
                             </Col>
                             <Col lg={4}>

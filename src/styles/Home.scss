@@ -15,22 +15,23 @@
             text-align: center;
             width: 40%;
             margin: 150px auto;
-            color: $secondary-color;
-            text-shadow: 1px 1px $primary-color;
+            color: $dark-theme;
+            text-shadow: 1px 1px #457b9d;
             border: 1px solid white;
         }
         
         section{
-            width: 50%;
+            width: 30%;
             display: flex;
             flex-direction: row;
+            justify-content: center;
             margin: 0 auto;
             border: 1px solid white;
             
             div{
                 text-align: center;
-                color: $secondary-color;
-                text-shadow: 1px 1px $primary-color;
+                color: $dark-theme;
+                text-shadow: 1px 1px #457b9d;
                 h3{
                     text-decoration: underline;
                 }
@@ -38,11 +39,11 @@
             }
             .homeGuideLinks{
                 text-transform: capitalize;
-                color: $secondary-color;
+                color: $dark-theme;
                 list-style: none;
             }
         .guides, .workouts{
-            border-right: .5px solid $secondary-color
+            border-right: .5px solid $dark-theme
         }
     }
 }

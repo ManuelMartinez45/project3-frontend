@@ -9,7 +9,7 @@ function Nav(props){
     if(props.user) console.log(props.user)
     return (
         <nav className="nav">
-            <Link id='homeLogo' className='menuLinks' to='/home'>
+            <Link id='homeLogo' className='menuLinks' to='/'>
                 <span >WAYTE</span>
             </Link>
             <Link className='menuLinks' to='/exercises'>

@@ -1,4 +1,4 @@
-import { Route, Switch} from 'react-router-dom'
+import { Route, Switch, useParams} from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import Index from '../pages/Index'
 import Home from '../pages/Home'
@@ -8,10 +8,11 @@ import Workouts from '../pages/Workouts'
 import Form from './Form'
 
 function Main(){
+
     const [exercise, setExercise] = useState([])
     const [workout, setWorkout] = useState([])
 
-    // const URL = 'https://wayte-backend.herokuapp.com/exercises'
+    // const URL = 'https://wayte-backend.herokuapp.com/'
     const exerciseURL = 'http://localhost:3001/'
     const workoutURL = 'http://localhost:3001/workouts'
     
@@ -40,13 +41,17 @@ function Main(){
         setWorkout(workouts)
     } 
 
+
+
+
+
     useEffect(() => getExercise(), [])
     useEffect(() => getWorkout(), [])
 
     return (
         <main>
             <Switch>
-            <Route exact path='/home' render={(props) => (
+            <Route exact path='/' render={(props) => (
                 <Home 
                     {...props}
                     exercise={exercise}
