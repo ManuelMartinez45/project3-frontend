@@ -4,10 +4,16 @@ import { Link } from 'react-router-dom'
 function Workout(props){
     return (
         <Container id='workoutPage'>
-            <Link to='/workouts/new'>
-            </Link>
             <Row>
-                <h1>Workouts</h1>
+                <Col lg={4}></Col>
+                <Col lg={4}>
+                    <h1>Workouts</h1>
+                </Col>
+                <Col lg={{span: 3, offset: 1}}>
+                    <Link to='/workouts/new'>
+                        <button>New</button>
+                    </Link>
+                </Col>
             </Row>
             <Row>
                 <Col lg={{span: 8, offset: 2}} id='workoutNames'>
@@ -20,7 +26,6 @@ function Workout(props){
                     </div>
                 </Col>
             </Row>
-                    <button>New</button>
         </Container>
     )
 }

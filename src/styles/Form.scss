@@ -1,0 +1,86 @@
+@import './variables.scss';
+
+#newFormPage{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: $dark-theme;
+    color: $primary-color;
+
+    h1{
+        display: flex;
+        height: 75px;
+        align-items: center;
+        margin-top: 30px;
+
+    }
+
+    #backBtn{
+        background-color: $secondary-color;
+        color: $dark-theme;
+        border: 1px solid $primary-color;
+        width: 6em;
+        height: 2em;
+        border-radius: 20px;
+        position: absolute;
+        left: 10%;
+        top: 15%;
+
+        &:hover{
+            background-color: $dark-theme;
+            border: 1px solid $primary-color;
+            color: $primary-color;
+        }
+    }
+
+    #form{
+        margin-top: 15px;
+        width: 50%;
+        height: 80%;
+        border-radius: 40px;
+        text-align: center;
+        background: $secondary-color;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+
+
+        input{
+            margin-top: 15px;
+            height: 2em;
+            border-radius: 20px;
+        }
+
+        label{
+            color: $dark-theme;
+        }
+
+        
+
+        #exerciseInput{
+            input{
+                margin-top: 15px;
+            }
+        }
+
+        .formBtn{
+            background: $dark-theme;
+            color: $primary-color;
+            border: 1px solid $primary-color;
+            border-radius: 20px;
+            width: 6em;
+            height: 2em;
+
+            &:hover{
+                background: $secondary-color;
+                color: $dark-theme;
+                border: 1px solid $primary-color;
+            }
+        }
+    }
+
+    
+}

@@ -5,6 +5,7 @@
 @import './styles/Home.scss';
 @import './styles/Workouts.scss';
 @import './styles/variables.scss';
+@import './styles/Form.scss';
 
 
 a{
@@ -27,7 +28,7 @@ nav{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    height: 3em;
+    height: 3.5em;
     background: $dark-theme;
     width: 100%; 
     // border: .5px solid #778899;

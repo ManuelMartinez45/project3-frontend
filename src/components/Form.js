@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom'
+import { Col, Container, Row } from 'react-bootstrap'
 
 function Form(props){
     const [form, setForm] = useState({
@@ -93,28 +94,55 @@ function Form(props){
 
 
     return (
-        <section>
-            <form onSubmit={handleSubmit}>
-                <label htmlFor="title">Title: </label>
-                <input 
-                    type="text"
-                    value={form.title}
-                    name='title'
-                    placeholder='title'
-                    onChange={handleChange}
-                />
-                
-                <input 
-                    type="text"
-                    value={form.split}
-                    name='split'
-                    placeholder='Weekly Split'
-                    onChange={handleChange}
-                />
-
-
-                        { exercises.map((exercise, index) => (
-                            <div key={ index }>
+        <Container id='newFormPage'>
+                <h1> New Workout Routine </h1>
+                <Link to='/workouts'>
+                    <button className='formBtn' id='backBtn' >Back</button>
+                </Link>
+            <section id='form'>
+                <form onSubmit={handleSubmit}>
+                    <Row>
+                        <Col>
+                            <label htmlFor="title"><h5>Title:</h5></label>
+                            <br />
+                            <input 
+                                type="text"
+                                value={form.title}
+                                name='title'
+                                placeholder='title'
+                                onChange={handleChange}
+                                />
+                            </Col>
+                    </Row>
+                    <Row>
+                        <Col>
+                            <label htmlFor="split"><h5>Weekly Split:</h5></label>
+                            <br />
+                            <input 
+                                type="text"
+                                value={form.split}
+                                name='split'
+                                placeholder='Weekly Split'
+                                onChange={handleChange}
+                                />
+                        </Col>
+                    </Row>
+                   
+                    
+                    <Row id='exerciseInputLabels'>
+                        <Col lg={4}>
+                            <label htmlFor="name"><h5>Exercise Name:</h5></label>
+                        </Col>
+                        <Col lg={4}>
+                            <label htmlFor="reps"><h5>Reps: </h5></label>
+                        </Col>
+                        <Col lg={4}>
+                            <label htmlFor="sets"><h5>Sets: </h5></label>
+                        </Col>
+                    </Row>
+                    { exercises.map((exercise, index) => (
+                        <Row key={ index }>
+                            <div id='exerciseInput'>
                                 <input 
                                     type="text" 
                                     placeholder='name' 
@@ -128,7 +156,6 @@ function Form(props){
                                     value={exercises.reps}
                                     name='reps'
                                     onChange={evt => handleExerciseChange(index,evt)}
-                                    // onChange={handleExerciseChange}
                                     />
                                 
                                 <input 
@@ -137,20 +164,16 @@ function Form(props){
                                     value={exercises.sets}
                                     name='sets'
                                     onChange={evt => handleExerciseChange(index,evt)}
-                                    // onChange={handleExerciseChange}
-                                /> 
-                                <button onClick={() => handleRemoveExercise(index)}>Remove</button>
+                                    /> 
+                                <button id='removeBtn' className='formBtn' onClick={() => handleRemoveExercise(index)}>Remove</button>
                             </div>
-                        ))}
-                <button onClick={handleAddExercise}>Add Exercise</button>
-                <button onClick={handleAddDay}>Add Day</button>
-                <br />
-                    <input type="submit" value='Add New Workout' />
-            </form>
-            <Link to='/workouts'>
-                <button>Back</button>
-            </Link>
-        </section>
+                        </Row>
+                    ))}
+                    <button className='formBtn' onClick={handleAddExercise}>+</button>
+                        <input className='formBtn' type="submit" value='Submit' />
+                </form>
+            </section>
+        </Container>
     )
 }
 
