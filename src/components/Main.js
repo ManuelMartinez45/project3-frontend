@@ -1,4 +1,4 @@
-import { Route, Switch, useParams} from 'react-router-dom'
+import { Route, Switch, Redirect} from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import Index from '../pages/Index'
 import Home from '../pages/Home'
@@ -8,14 +8,13 @@ import Workouts from '../pages/Workouts'
 import WorkoutDisplay from '../pages/WorkoutDisplay'
 import Form from './Form'
 
-function Main(){
+function Main(props){
 
     const [exercise, setExercise] = useState([])
     const [workout, setWorkout] = useState([])
 
-    // const URL = 'https://wayte-backend.herokuapp.com/'
-    const exerciseURL = 'http://localhost:3001/'
-    const workoutURL = 'http://localhost:3001/workouts'
+    const exerciseURL = 'https://wayte-backend.herokuapp.com/'
+    const workoutURL = 'https://wayte-backend.herokuapp.com/workouts'
     
     async function getExercise(){
         const response = await fetch(exerciseURL);
@@ -24,11 +23,11 @@ function Main(){
     }
 
     async function getWorkout(){
-        const response = await fetch(workoutURL);
+        const response = await fetch(workoutURL)
         const data = await response.json()
         setWorkout(data)
     }
-
+    
     async function createWorkout(workout){
         const response = await fetch(workoutURL, {
             method: 'POST',
@@ -38,12 +37,7 @@ function Main(){
             body: JSON.stringify(workout)
         })
         getWorkout()
-        const workouts = await response.json()
-        setWorkout(workouts)
     } 
-
-
-
 
 
     useEffect(() => getExercise(), [])

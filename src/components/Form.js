@@ -76,7 +76,6 @@ function Form(props){
         }])
         form.days[1] = days
     }
-    console.log(form.days)
 
     function handleSubmit(evt){
         evt.preventDefault()

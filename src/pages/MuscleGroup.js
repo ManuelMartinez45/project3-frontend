@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { Container, Row, Col} from 'react-bootstrap'
+import { Container, Row, Col, Carousel} from 'react-bootstrap'
 
 
 function MuscleGroup(props){
@@ -9,6 +9,39 @@ function MuscleGroup(props){
     
     return(
         <Container id='muscleGroupPage'>
+                    <Carousel id='carousel' fade>
+                        <Carousel.Item>
+                            <img
+                            src="https://api.time.com/wp-content/uploads/2020/03/gym-coronavirus.jpg"
+                            alt="First slide"
+                            />
+                        </Carousel.Item>
+                        <Carousel.Item>
+                            <img
+                            src="https://business.uoregon.edu/sites/business1.uoregon.edu/files/styles/banner/public/news/Enews-Covid-Gym-Safety-thumb-202101.jpg?itok=kFFfNUfR"
+                            alt="Second slide"
+                            />
+                        </Carousel.Item>
+                        <Carousel.Item>
+                            <img
+                            src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/guy-training-at-the-gym-royalty-free-image-979026970-1561129165.jpg"
+                            alt="Third slide"
+                            />
+                        </Carousel.Item>
+                        <Carousel.Item>
+                            <img
+                            src="https://www.muscleandfitness.com/wp-content/uploads/2019/07/Hands-Clapping-Chaulk-Kettlebell.jpg?quality=86&strip=all"
+                            alt="Third slide"
+                            />
+                        </Carousel.Item>
+                        </Carousel>
+
+
+
+
+
+
+
                     <h1 id='muscleHeading'>{muscleGroup}</h1>
 
                     <Row id='muscleGroupList'>

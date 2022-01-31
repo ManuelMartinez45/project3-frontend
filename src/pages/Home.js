@@ -58,10 +58,10 @@ function Home(){
                                 <img src="https://www.csuohio.edu/sites/default/files/eat-right-575px.jpg" alt="" />
 
                             <br />
-                                <p className='articleSummary'>
+                                <div className='articleSummary'>
                                     <h3>Lorem Ipsum</h3>
                                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores ratione tempore quod atque iure, id adipisci saepe, quisquam nulla expedita facilis enim? Minima iure voluptatibus ad accusantium obcaecati fugiat id. <br/><a href='#'>View More...</a>
-                                </p>
+                                </div>
                             </div>
                         </Col>
                         
@@ -69,10 +69,10 @@ function Home(){
                             <div className='mainBody'>
                                 <img src="https://www.verywellhealth.com/thmb/P6T-yEHRfWJdtHoZXYdaYGjKSzc=/2121x1414/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-1145581060-c6f3afa5f308461cab0a77d79a51c68a.jpg" alt="" />
                             <br />
-                                <p className='articleSummary'>
+                                <div className='articleSummary'>
                                     <h3>Lorem Ipsum</h3>
                                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores ratione tempore quod atque iure, id adipisci saepe, quisquam nulla expedita facilis enim? Minima iure voluptatibus ad accusantium obcaecati fugiat id. <br /> <a href='#'>View More...</a>
-                                </p>
+                                </div>
                             </div>
                         </Col>
 
@@ -80,10 +80,10 @@ function Home(){
                             <div className='mainBody'>
                                 <img src="https://tcoyd.org/wp-content/uploads/2021/04/weight-loss_1100x733.jpg" alt="" />
                             <br />
-                                <p className='articleSummary'>
+                                <div className='articleSummary'>
                                     <h3>Lorem Ipsum</h3>
                                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores ratione tempore quod atque iure, id adipisci saepe, quisquam nulla expedita facilis enim? Minima iure voluptatibus ad accusantium obcaecati fugiat id. <br /> <a href='#'>View More...</a>
-                                </p>
+                                </div>
                             </div>
                         </Col>
                     </Row>
@@ -107,10 +107,10 @@ function Home(){
                                 <img src="https://www.mensjournal.com/wp-content/uploads/2015/03/singleRDL.jpg?w=900&quality=86&strip=all" alt="" />
 
                             <br />
-                                <p className='articleSummary'>
+                                <div className='articleSummary'>
                                     <h3>Lorem Ipsum</h3>
                                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores ratione tempore quod atque iure, id adipisci saepe, quisquam nulla expedita facilis enim? Minima iure voluptatibus ad accusantium obcaecati fugiat id. <br/><a href='#'>View More...</a>
-                                </p>
+                                </div>
                             </div>
                         </Col>
                         
@@ -118,10 +118,10 @@ function Home(){
                             <div className='mainBody'>
                                 <img src="https://embed.widencdn.net/img/veritas/9vexeukzcf/1200x630px/pilates-ab-exercise.jpeg?u=at8tiu&use=d502n&k=c" alt="" />
                             <br />
-                                <p className='articleSummary'>
+                                <div className='articleSummary'>
                                     <h3>Lorem Ipsum</h3>
                                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores ratione tempore quod atque iure, id adipisci saepe, quisquam nulla expedita facilis enim? Minima iure voluptatibus ad accusantium obcaecati fugiat id. <br /> <a href='#'>View More...</a>
-                                </p>
+                                </div>
                             </div>
                         </Col>
 
@@ -129,10 +129,10 @@ function Home(){
                             <div className='mainBody'>
                                 <img src="https://www.mensjournal.com/wp-content/uploads/2020/10/BeastMode.jpg?quality=86&strip=all" alt="" />
                             <br />
-                                <p className='articleSummary'>
+                                <div className='articleSummary'>
                                     <h3>Lorem Ipsum</h3>
                                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores ratione tempore quod atque iure, id adipisci saepe, quisquam nulla expedita facilis enim? Minima iure voluptatibus ad accusantium obcaecati fugiat id. <br /> <a href='#'>View More...</a>
-                                </p>
+                                </div>
                             </div>
                         </Col>
                     </Row>
@@ -140,32 +140,6 @@ function Home(){
             </Col>
         </Row>  
                 
-                
-                {/* <section id='articles'>
-                
-                <h1>Articles</h1>
-
-                <Row>
-                    <Col lg={{span: 10, offset: 1}}>
-                        <div className='mainBody'>
-                            <img src="https://www.mensjournal.com/wp-content/uploads/2015/03/singleRDL.jpg?w=900&quality=86&strip=all" alt="" />
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique, expedita doloremque quia obcaecati asperiores mollitia provident pariatur, repellat optio voluptatem tenetur maxime in eaque. Repellat nam molestias eius quis dolore.
-                                Inventore itaque ipsa eius suscipit explicabo? Quidem nisi natus quaerat esse aspernatur, illo quod harum eos impedit architecto eum? Nemo, distinctio eum voluptatum deserunt quos cum. Enim aperiam officiis perferendis!
-                            </p>
-                        </div>
-                    </Col>
-                </Row>
-                <Row>
-                    <div>
-                        <img src="https://www.mensjournal.com/wp-content/uploads/2015/03/singleRDL.jpg?w=900&quality=86&strip=all" alt="" />
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique, expedita doloremque quia obcaecati asperiores mollitia provident pariatur, repellat optio voluptatem tenetur maxime in eaque. Repellat nam molestias eius quis dolore.
-                            Inventore itaque ipsa eius suscipit explicabo? Quidem nisi natus quaerat esse aspernatur, illo quod harum eos impedit architecto eum? Nemo, distinctio eum voluptatum deserunt quos cum. Enim aperiam officiis perferendis!
-                        </p>
-                    </div>
-                </Row>
-                </section> */}
         </Container>
     )
 }

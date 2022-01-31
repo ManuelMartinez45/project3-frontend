@@ -3,7 +3,6 @@ import { Row, Col } from 'react-bootstrap'
 
 function Exercise(props){
     const name = props.match.params.exercise
-    console.log(name)
     const exercise = props.exercise.find((e) => e.name === name)
 
     return (
