@@ -5,7 +5,7 @@ function Workout(props){
 
     return (
         <Container id='workoutPage'>
-            <Row>
+            {/* <Row>
                 <Col lg={4}></Col>
                 <Col lg={4}>
                     <h1>Workouts</h1>
@@ -15,6 +15,18 @@ function Workout(props){
                         <button>New</button>
                     </Link>
                 </Col>
+            </Row> */}
+            <Row>
+                <Col lg={{span: 3, offset: 11}}>
+                    <Link to='/workouts/new'>
+                        <button id='newBtn'>New</button>
+                    </Link>
+                </Col>
+            </Row>
+            <Row>
+                <h1>
+                    My Workouts
+                </h1>
             </Row>
             <Row>
                 <Col lg={{span: 8, offset: 2}} id='workoutNames'>

@@ -56,11 +56,12 @@ nav{
         width: 125px;
         border-radius: 20px;
         text-align: center;
+        transition: background-color .2s, color .2s;
+
         &:hover{
             background-color: $primary-color;
             color: whitesmoke;
         }
-
     }
     #homeLogo{
         margin-left: 20px;
@@ -102,11 +103,9 @@ nav{
         border-radius: 20px;
         text-align: center;
         background-color: white;
-        // border: 1px solid $primary-color;
         border: none;
         &:hover{
             border: 1px solid $primary-color;
-            // color: $secondary-color;
 
         }
     }
@@ -121,6 +120,7 @@ nav{
         text-align: center;
         background-color: white;
         border: 1px solid $primary-color;
+        transition: background-color .3s, color .3s;
 
         &:hover{
             background-color: $primary-color;
@@ -128,34 +128,7 @@ nav{
         }
     }
 }
-// *********SEARCH BAR***********
 
-//SideMenu
-// #sideMenu{
-    //     position: fixed;
-    //     left: 0;
-    //     height: 100%;
-    //     background: linear-gradient(to top, #696969, $primary-color);
-    //     margin: 0;
-    //     padding-top: 6em;
-    
-    //     ul{
-        //         height: 100%;
-        //         width: 100%;
-        //         margin: 0;
-        //         padding: 0;
-//         li{ 
-//             width: 100%;
-//             list-style: none;
-//             font-size: 20px;
-//             text-transform: capitalize;
-//             margin: 10px 0;
-//             border-bottom: 1px solid black;
-//             color: white;
-//         }
-//     }
-    
-// }
 
 
 

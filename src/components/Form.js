@@ -110,7 +110,7 @@ function Form(props){
                                 type="text"
                                 value={form.title}
                                 name='title'
-                                placeholder='title'
+                                placeholder='Title'
                                 onChange={handleChange}
                                 />
                             </Col>
@@ -128,9 +128,59 @@ function Form(props){
                                 />
                         </Col>
                     </Row>
-                   
-                    
+
+{/*                     
                     <Row id='exerciseInputLabels'>
+                        <Col lg={4}>
+                            <label htmlFor="name"><h5>Exercise Name:</h5></label>
+                        </Col>
+                        <Col lg={4}>
+                            <label htmlFor="reps"><h5>Reps: </h5></label>
+                        </Col>
+                        <Col lg={4}>
+                            <label htmlFor="sets"><h5>Sets: </h5></label>
+                        </Col>
+                    </Row> */}
+                    { exercises.map((exercise, index) => (
+                        <Row key={ index }>
+                            <div id='exerciseInput'>
+                                <div id="name">
+                                    <label htmlFor="name">Exercise Name:</label>
+                                    <input 
+                                        type="text" 
+                                        placeholder='Exercise Name' 
+                                        value={exercises.name}
+                                        name='name'
+                                        onChange={evt => handleExerciseChange(index,evt)}
+                                        />
+                                </div>
+
+                                <div id='reps'>
+                                    <label htmlFor="reps">Reps:</label>
+                                    <input 
+                                        type="text" 
+                                        placeholder='Reps' 
+                                        value={exercises.reps}
+                                        name='reps'
+                                        onChange={evt => handleExerciseChange(index,evt)}
+                                        />
+                                </div>
+
+                                <div id='sets'>
+                                    <label htmlFor="sets">Sets:</label>
+                                    <input 
+                                        type="text" 
+                                        placeholder='Sets' 
+                                        value={exercises.sets}
+                                        name='sets'
+                                        onChange={evt => handleExerciseChange(index,evt)}
+                                        /> 
+                                </div>
+                                <button id='removeBtn' className='formBtn' onClick={() => handleRemoveExercise(index)}>Remove</button>
+                            </div>
+                        </Row>
+                    ))}
+                    {/* <Row id='exerciseInputLabels'>
                         <Col lg={4}>
                             <label htmlFor="name"><h5>Exercise Name:</h5></label>
                         </Col>
@@ -169,7 +219,7 @@ function Form(props){
                                 <button id='removeBtn' className='formBtn' onClick={() => handleRemoveExercise(index)}>Remove</button>
                             </div>
                         </Row>
-                    ))}
+                    ))} */}
                     <button className='formBtn' onClick={handleAddExercise}>+</button>
                         <input className='formBtn' type="submit" value='Submit' />
                 </form>

@@ -6,7 +6,7 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    background-color: $dark-theme;
+    background-color: white;
     color: $primary-color;
 
     h1{
@@ -14,22 +14,23 @@
         height: 75px;
         align-items: center;
         margin-top: 30px;
-
+        text-decoration: underline;
     }
 
     #backBtn{
-        background-color: $secondary-color;
-        color: $dark-theme;
-        border: 1px solid $primary-color;
+        background-color: $primary-color;
+        color: white;
+        border: .5px solid black;
         width: 6em;
         height: 2em;
         border-radius: 20px;
         position: absolute;
         left: 10%;
         top: 15%;
+        font-weight: bold;
 
         &:hover{
-            background-color: $dark-theme;
+            background-color: white;
             border: 1px solid $primary-color;
             color: $primary-color;
         }
@@ -38,51 +39,59 @@
     #form{
         margin-top: 30px;
         width: 50%;
-        height: 60%;
+        height: 80%;
         border-radius: 40px;
         text-align: center;
-        background: $secondary-color;
+        border: 1px solid $primary-color;
         display: flex;
         flex-direction: column;
-        justify-content: center;
-
+        // justify-content: center;
 
 
         input{
             margin-top: 15px;
             height: 2em;
             border-radius: 10px;
+            margin: 10px;
+            border: 1px solid black;
+
+            &::placeholder{
+                padding-left: 7px;
+            }
 
         }
 
         label{
-            color: $dark-theme;
+            color: $primary-color;
+            text-decoration: underline;
             text-align: center;
+            margin-top: 12px;
         }
-
-        
 
         #exerciseInput{
-            input{
-                margin-top: 15px;
+            // display: flex;
+            div{
+                display: inline-flex;
+                flex-direction: column;
             }
-
             label{
-                text-align: center;
+                font-weight: 500;
             }
         }
+        
+
 
         .formBtn{
-            background: $dark-theme;
-            color: $primary-color;
-            border: 1px solid $primary-color;
+            background: $primary-color;
+            color: white;
+            border: 1px solid black;
             border-radius: 20px;
             width: 6em;
             height: 2em;
 
             &:hover{
-                background: $secondary-color;
-                color: $dark-theme;
+                background: white;
+                color: $primary-color;
                 border: 1px solid $primary-color;
             }
         }

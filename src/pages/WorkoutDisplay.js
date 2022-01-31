@@ -7,11 +7,11 @@ function WorkoutDisplay(props){
     return(
         <Container id='WorkoutDisplay'>
             <h1>{workout.title}</h1>
-            <h3>{workout.split}</h3>
+            {/* <h3>{workout.split}</h3> */}
             <div id='workoutExercises'>
                 { 
                 workout.days[0].exercises.map((exercise,key) => (
-                    <div key={key}>
+                    <div id='exercises' key={key}>
                         <Link to={`/exercises/${exercise.main}/${exercise.name}`}>
                             <h6>{exercise.name}</h6>
                         </Link>

@@ -1,36 +1,56 @@
 @import './variables.scss';
 
 #WorkoutDisplay{
-    width: 100vw;
+    width: 100%;
     height: 100%;
-    margin: 45px;
-    h1,h3{
+    // margin: 45px;
+    background: white;
+    padding: 20px;
+    h1{
         text-align: center;
-        color: $dark-theme;
-        margin: 15px;
-        margin-left: 15%;
+        color: $primary-color;
+        width: 50%;
+        margin: 0 auto;
+        text-decoration: underline;
     }
 
     #workoutExercises{
-        background-color: $dark-theme;
-        color: $secondary-color;
+        // background-color: $secondary-color;
         text-align: center;
-        margin-top: 40px;
-        margin-left: 30%;
-        margin-bottom: 40px;
         width: 50%;
+        margin: 30px auto;
         padding: 20px;
-        border-radius: 40px;
 
-
-        h6{
-            margin-top: 15px;
-            color: $primary-color;
+        #exercises{
+            border-top: 1px solid black;
+            border-bottom: 1px solid black;
+            margin: 10px;
+            padding: 20px;
             
-            &:hover{
-                color: $secondary-color
+            h6{
+                color: $primary-color;
+                text-decoration: underline;
+                // transition: font-size .2s, font-weight .2s;
+
+                &:hover{
+                    // font-size: 110%;
+                    font-weight: bold;
+                }
+            }
+
+            p{
+                color: black;
             }
         }
+
+        // h6{
+        //     margin-top: 15px;
+        //     color: $primary-color;
+            
+        //     &:hover{
+        //         color: $secondary-color
+        //     }
+        // }
 
     }
 

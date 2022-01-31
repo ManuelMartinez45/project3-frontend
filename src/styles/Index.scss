@@ -4,21 +4,40 @@
 //   ********************
 
 #indexPage{
-    background-color: $dark-theme;
+    background-color: white;
     margin: 0 auto;
-    padding-top: 20px;
+    padding: 0;
 
     
     h1{
-        transform: translate(18%, 18%);
+        background-image: url('https://tickertapecdn.tdameritrade.com/assets/images/pages/md/barbell-strategy-fixed-income-investments-tt0221.jpg');
+        background-position: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         font-size: 2.5em;
-        color: $secondary-color;
+        font-weight: bold;
+        color: $primary-color;
         margin-bottom: 20px;
         text-align: center;
-        height: 15%;
-        width: 75%;
-        padding-bottom: 15px;
-        border-bottom: 2px solid $secondary-color;
+        height: 425px;
+        width: 100%;
+        border-bottom: 2px solid $primary-color;
+    }
+
+    #muscleGroupList{
+        display: flex;
+        justify-content: center;
+        a{
+            font-weight: bold;  
+            color: $primary-color;
+            font-size: 120%;
+
+            &:hover{
+                font-size: 125%;
+                font-weight: bolder;
+            }
+        }
     }
 
     #exerciseNames{
@@ -27,27 +46,39 @@
         
         .exercise{
             width: 75%;
+            border: 1px solid $primary-color;
+            margin: 10px;
+            
+            img{
+                display: flex;
+                justify-content: center;
+                margin: 10px auto;
+                width: 80%;
+                height: 200px;
+                // border: 1px solid $primary-color;
+
+            }
             
             h3{
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                width: 100%;
+                margin: 10px auto;
+                width: 75%;
                 height: 60px;
-                border: 1px solid $secondary-color;
-                color: $secondary-color;
-                border-radius: 50px;
+                text-align: center;
+                border-bottom: 2px solid $secondary-color;
+                border-top: 2px solid $secondary-color;
+                color: $primary-color;
                 transition: color .2s, background-color .2s, border-color .2s, opacity .2s;
             }
 
             &:hover{
                 h3{
-                    color: $dark-theme;
-                    background: $secondary-color;
-                    border-color: $primary-color;
+                    color: white;
+                    background: $primary-color;
+                    border-color: $secondary-color;
                     opacity: .6;
-                    border-radius: 50px;
-                    text-shadow: 1px 1px $primary-color;
                 }
             }
         }
