@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Link, useHistory } from 'react-router-dom'
+import { Link} from 'react-router-dom'
 import { Col, Container, Row } from 'react-bootstrap'
 
 function Form(props){
@@ -9,8 +9,6 @@ function Form(props){
         days: [{},{},{}]
         
     })
-
-    let history = useHistory()
     
     const [exercises, setExercises] = useState([
         {
@@ -63,18 +61,6 @@ function Form(props){
         const values = [...exercises]
         values.splice(index,1)
         setExercises(values)
-    }
-
-    function handleAddDay(evt, index){
-        evt.preventDefault()
-        setDays([...days], [{
-            exercises: {
-                name: '',
-                reps: '',
-                sets: ''
-            }
-        }])
-        form.days[1] = days
     }
 
     function handleSubmit(evt){

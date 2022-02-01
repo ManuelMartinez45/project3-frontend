@@ -36,12 +36,6 @@ function MuscleGroup(props){
                         </Carousel.Item>
                         </Carousel>
 
-
-
-
-
-
-
                     <h1 id='muscleHeading'>{muscleGroup}</h1>
 
                     <Row id='muscleGroupList'>

@@ -1,4 +1,4 @@
-import { Route, Switch, Redirect} from 'react-router-dom'
+import { Route, Switch} from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import Index from '../pages/Index'
 import Home from '../pages/Home'
@@ -36,7 +36,7 @@ function Main(props){
             },
             body: JSON.stringify(workout)
         })
-        getWorkout()
+        getWorkout(response)
     } 
 
 

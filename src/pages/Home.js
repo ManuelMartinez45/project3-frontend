@@ -1,6 +1,5 @@
 import { Container, Row, Col, Carousel} from 'react-bootstrap'
-import { Fade, Slide, SlideProps } from 'react-awesome-reveal'
-import { Link } from 'react-router-dom'
+import { Fade } from 'react-awesome-reveal'
 
 
 function Home(){
@@ -47,9 +46,6 @@ function Home(){
             <Col>
                 <section id="nutrition">
                     <Fade onVisibilityChange={true} duration={1200} >
-                    {/* <h1>
-                        "Victory isn’t defined by wins and losses; it’s defined by effort."
-                    </h1> */}
                     <h1>NUTRITION</h1>
                     </Fade>
                     <Row>
@@ -96,9 +92,6 @@ function Home(){
             <Col>
                 <section id="articles">
                     <Fade onVisibilityChange={true} duration={1200} >
-                    {/* <h1>
-                        "Victory isn’t defined by wins and losses; it’s defined by effort."
-                    </h1> */}
                     <h1>Articles</h1>
                     </Fade>
                     <Row>

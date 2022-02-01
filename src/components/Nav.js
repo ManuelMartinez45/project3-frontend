@@ -1,8 +1,6 @@
 import { Link } from 'react-router-dom'
-import { BiDumbbell, BiSearch } from 'react-icons/bi'
 import { FaUserCircle, FaUserSlash} from 'react-icons/fa'
-import { IoIosJournal } from 'react-icons/io'
-import { InputGroup, Nav, Navbar, NavDropdown, FormControl, Container, Form, Button} from 'react-bootstrap'
+import { InputGroup, NavDropdown, FormControl } from 'react-bootstrap'
 import { login, logout } from '../services/firebase'
 
 function Navbarr(props){
@@ -13,9 +11,6 @@ function Navbarr(props){
             <Link id='homeLogo' className='menuLinks' to='/'>
                 <span >WAYTE</span>
             </Link>
-            {/* <Link className='menuLinks' to='/exercises'>
-                Exercises
-            </Link> */}
             <NavDropdown title="Exercises" id="exercises">
                 <NavDropdown.Item className='exerciseLinks' href="/exercises/arms">Arms</NavDropdown.Item>
                 <NavDropdown.Divider />
