@@ -1,70 +1,44 @@
-# Getting Started with Create React App
+# WAYTE
+- A web app made for fitness/exercise/nutrition goals.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# User Stories
 
-## Available Scripts
+- Users will be able to land on a home page that offers informational articles on nutrition + fitness
 
-In the project directory, you can run:
+- Users will be able to login/logout
 
-### `npm start`
+- Users will be able to navigate the app through a top dashboard
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Users will be able to select which muscle group or all they would like to view exercise guides on.
+ 
+- Users will be able to create their own workouts
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Users will be able to delete/edit their own workouts
 
-### `npm test`
+# Technologies Used
+- Javascript
+- CSS3
+- HTML5
+- MongoDB
+- Mongoose
+- React
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# Screenshots
+![Screen Shot 2022-02-01 at 10 51 38 AM](https://user-images.githubusercontent.com/22863727/152003057-f196bac4-4e0f-45df-a7b0-e3bd6185bee9.png)
 
-### `npm run build`
+![Screen Shot 2022-02-01 at 10 52 05 AM](https://user-images.githubusercontent.com/22863727/152003194-b439a825-c8ec-4dee-9d7c-1cb30895e203.png)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![Screen Shot 2022-02-01 at 10 51 22 AM](https://user-images.githubusercontent.com/22863727/152003277-429fe4fe-9e8f-4138-a7d2-cda1ebcee478.png)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+# Getting Started
+[Live Site](https://wayte.netlify.app/)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# Future Enhancements 
+- Search System
+- Layered Days within creating workouts
+- Footer to display my information
+- Video guides
+- Actual Nutrition + Articles pages
