@@ -3,19 +3,9 @@ import { Link } from 'react-router-dom'
 
 function Workout(props){
 
+
     return (
         <Container id='workoutPage'>
-            {/* <Row>
-                <Col lg={4}></Col>
-                <Col lg={4}>
-                    <h1>Workouts</h1>
-                </Col>
-                <Col lg={{span: 3, offset: 1}}>
-                    <Link to='/workouts/new'>
-                        <button>New</button>
-                    </Link>
-                </Col>
-            </Row> */}
             <Row>
                 <Col lg={{span: 3, offset: 11}}>
                     <Link to='/workouts/new'>
@@ -33,7 +23,7 @@ function Workout(props){
                     <div className="workouts">
                         {props.workout.map((workout,key) => (
                             <Link key={key} to={`/workouts/${workout._id}`}>
-                                <h3>{workout.title}</h3>
+                                <h3>{workout.title}</h3> 
                             </Link>
                         ))}
                     </div>

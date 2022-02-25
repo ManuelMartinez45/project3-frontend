@@ -27,6 +27,7 @@ function Main(props){
         const data = await response.json()
         setWorkout(data)
     }
+
     
     async function createWorkout(workout){
         const response = await fetch(workoutURL, {
